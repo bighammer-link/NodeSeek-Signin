@@ -141,7 +141,7 @@ def bark(title: str, content: str) -> None:
         url = f'{push_config.get("BARK_PUSH")}/{urllib.parse.quote_plus(title)}/{urllib.parse.quote_plus(content)}'
     else:
         url = f'https://api.day.app/{push_config.get("BARK_PUSH")}/{urllib.parse.quote_plus(title)}/{urllib.parse.quote_plus(content)}'
-
+    print(url)
     bark_params = {
         "BARK_ARCHIVE": "isArchive",
         "BARK_GROUP": "group",
